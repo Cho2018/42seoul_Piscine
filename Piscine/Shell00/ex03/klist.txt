@@ -1,0 +1,5 @@
+Credentials cache: API:B08167BD-A13E-454D-AD2A-C97CFAF35396
+        Principal: hecho@42SEOUL.KR
+
+  Issued                Expires               Principal
+Jun 29 14:25:41 2020  Jun 30 00:25:41 2020  krbtgt/42SEOUL.KR@42SEOUL.KR
