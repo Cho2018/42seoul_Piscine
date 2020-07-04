@@ -1,5 +1,6 @@
-Credentials cache: API:B08167BD-A13E-454D-AD2A-C97CFAF35396
+Credentials cache: API:57AD7E85-8D5B-442B-8340-4C5920AC7609
         Principal: hecho@42SEOUL.KR
 
   Issued                Expires               Principal
-Jun 29 14:25:41 2020  Jun 30 00:25:41 2020  krbtgt/42SEOUL.KR@42SEOUL.KR
+Jul  4 08:56:45 2020  Jul  4 18:56:45 2020  krbtgt/42SEOUL.KR@42SEOUL.KR
+Jul  4 08:56:48 2020  Jul  4 18:56:45 2020  HTTP/student-storage.42seoul.kr@42SEOUL.KR
