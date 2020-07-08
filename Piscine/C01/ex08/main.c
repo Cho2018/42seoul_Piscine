@@ -6,7 +6,7 @@
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 17:30:47 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/08 16:31:04 by hecho            ###   ########.fr       */
+/*   Updated: 2020/07/08 18:33:37 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ void	ft_sort_int_tab(int *tab, int size);
 int main()
 {
 	int arr[5] = {3, -1, 99, 7, -9};
-	int size = 5;
+	int size;
+
+	size = 5;
 
 	ft_sort_int_tab(arr, size);
 

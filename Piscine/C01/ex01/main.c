@@ -6,7 +6,7 @@
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 16:54:19 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/08 13:41:08 by hecho            ###   ########.fr       */
+/*   Updated: 2020/07/08 18:36:23 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,12 @@ void	ft_ultimate_ft(int *********nbr);
 
 int main()
 {
-	int a;
-	char arr[3];
-
-	arr[1] = ' ';
-	arr[2] = '\n';
+	int		a;
+	char	arr[3];
 
 	a = 1;
+	arr[1] = ' ';
+	arr[2] = '\n';
 
 	int *p1 = &a;
 	int **p2 = &p1;

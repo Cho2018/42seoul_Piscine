@@ -6,7 +6,7 @@
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 17:01:52 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/08 13:44:29 by hecho            ###   ########.fr       */
+/*   Updated: 2020/07/08 18:36:59 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,14 @@ void	ft_swap(int *a, int *b);
 
 int main()
 {
-	int a = 7;
-	int b = 15;
+	int a;
+	int b;
+
+	a = 7;
+	b = 15;
 
 	printf("%d, %d\n", a, b);
-
 	ft_swap(&a, &b);
-
 	printf("%d, %d\n", a, b);
 }
 

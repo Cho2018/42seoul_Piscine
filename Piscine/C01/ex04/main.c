@@ -6,7 +6,7 @@
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 17:09:20 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/08 13:53:31 by hecho            ###   ########.fr       */
+/*   Updated: 2020/07/08 18:20:18 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@ void	ft_ultimate_div_mod(int *a, int *b);
 
 int main()
 {
-	int a = 11;
-	int b = 6;
+	int a;
+	int b;
+
+	a = 11;
+	b = 6;
 
 	ft_ultimate_div_mod(&a, &b);
 
@@ -27,9 +30,11 @@ int main()
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int x = *a;
-	int y = *b;
+	int x;
+	int y;
 
+	x = *a;
+	y = *b;
 	*a = x / y;
 	*b = x % y;
 }

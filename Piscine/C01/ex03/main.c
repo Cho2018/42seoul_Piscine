@@ -6,7 +6,7 @@
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 17:05:43 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/08 13:50:17 by hecho            ###   ########.fr       */
+/*   Updated: 2020/07/08 18:19:01 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,15 @@ void	ft_div_mod(int a, int b, int *div, int *mod);
 
 int main()
 {
-	int a = 21;
-	int b = 6;
+	int a;
+	int b;
+	int div;
+	int mod;
 
-	int div = 0;
-	int mod = 0;
+	a = 21;
+	b = 6;
+	div = 0;
+	mod = 0;
 
 	ft_div_mod(a, b, &div, &mod);
 

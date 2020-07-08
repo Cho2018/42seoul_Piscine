@@ -6,7 +6,7 @@
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 17:18:16 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/08 14:59:43 by hecho            ###   ########.fr       */
+/*   Updated: 2020/07/08 18:38:43 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@ int		ft_strlen(char *str);
 
 int main()
 {
-	char str[7];
+	char	str[7];
+	int		answer;
 
 	str[0] = 'a';
 	str[1] = 'b';
 	str[2] = 'c';
 	str[3] = '\0';
 
-	int answer;
-
 	answer = ft_strlen(str);
+
 	printf("%d\n", answer);
 }
 
@@ -39,6 +39,5 @@ int		ft_strlen(char *str)
 	{
 		len++;
 	}
-
 	return (len);
 }
