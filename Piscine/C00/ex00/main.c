@@ -6,21 +6,20 @@
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 14:44:32 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/06 14:54:40 by hecho            ###   ########.fr       */
+/*   Updated: 2020/07/08 09:58:32 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_putchar(char c);
+void	ft_putchar(char c);
 
 int main() 
 {
 	ft_putchar('a');
 }
 
-void    ft_putchar(char c) 
+void	ft_putchar(char c) 
 {
 	write(1, &c, 1);
 }
-

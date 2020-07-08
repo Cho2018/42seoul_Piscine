@@ -6,14 +6,13 @@
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 14:55:35 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/06 14:56:28 by hecho            ###   ########.fr       */
+/*   Updated: 2020/07/08 10:01:55 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_putchar(char c) 
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-

@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/06 15:21:14 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/08 10:27:47 by hecho            ###   ########.fr       */
+/*   Created: 2020/07/08 12:18:43 by hecho             #+#    #+#             */
+/*   Updated: 2020/07/08 12:29:32 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void);
-
-int main()
+void	cal(int nb)
 {
-	ft_print_numbers();
+	char c;
+
+	if (nb == 0)
+		return ;
+	cal(nb / 10);
+	c = '0' + nb % 10;
+	write(1, &c, 1);
 }
 
-void	ft_print_numbers(void)
+void	ft_putnbr(int nb)
 {
-	char num;
+	char c;
 
-	num = '0';
-	while (num <= '9')
+	if (nb >= 0)
 	{
-		write(1, &num, 1);
-		num++;
+		cal(nb / 10);
+		c = '0' + nb % 10;
 	}
+	else
+	{
+		write(1, "-", 1);
+		cal(-(nb / 10));
+		c = '0' - nb % 10;
+	}
+	write(1, &c, 1);
 }

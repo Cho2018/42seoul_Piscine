@@ -5,28 +5,51 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/06 15:21:14 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/08 10:27:47 by hecho            ###   ########.fr       */
+/*   Created: 2020/07/07 11:41:41 by hecho             #+#    #+#             */
+/*   Updated: 2020/07/08 11:24:01 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void);
+void	ft_print_comb2(void);
 
 int main()
 {
-	ft_print_numbers();
+	ft_print_comb2();
 }
 
-void	ft_print_numbers(void)
+void	print(int n)
 {
-	char num;
+	char arr[2];
 
-	num = '0';
-	while (num <= '9')
+	arr[0] = n / 10 + 48;
+	arr[1] = n % 10 + 48;
+	write(1, arr, 2);
+}
+
+void	ft_print_comb2(void)
+{
+	int		arr[2];
+	char	chars[2];
+
+	arr[0] = 0;
+	chars[0] = ',';
+	chars[1] = ' ';
+	while (arr[0] <= 98)
 	{
-		write(1, &num, 1);
-		num++;
+		arr[1] = arr[0] + 1;
+		while (arr[1] <= 99)
+		{
+			print(arr[0]);
+			write(1, &chars[1], 1);
+			print(arr[1]);
+			if (!(arr[0] == 98 && arr[1] == 99))
+			{
+				write(1, chars, 2);
+			}
+			arr[1]++;
+		}
+		arr[0]++;
 	}
 }

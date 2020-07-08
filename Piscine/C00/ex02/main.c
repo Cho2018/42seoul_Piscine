@@ -6,20 +6,20 @@
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 15:13:03 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/06 15:15:02 by hecho            ###   ########.fr       */
+/*   Updated: 2020/07/08 10:23:29 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_print_reverse_alphabet(void);
+void	ft_print_reverse_alphabet(void);
 
-int main() 
+int main()
 {
 	ft_print_reverse_alphabet();
 }
 
-void    ft_print_reverse_alphabet(void)
+void	ft_print_reverse_alphabet(void)
 {
 	char c;
 
@@ -30,4 +30,3 @@ void    ft_print_reverse_alphabet(void)
 		c--;
 	}
 }
-

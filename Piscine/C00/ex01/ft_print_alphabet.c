@@ -6,13 +6,13 @@
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 15:10:37 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/06 15:12:25 by hecho            ###   ########.fr       */
+/*   Updated: 2020/07/08 10:18:33 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_print_alphabet(void)
+void	ft_print_alphabet(void)
 {
 	char c;
 
@@ -23,4 +23,3 @@ void    ft_print_alphabet(void)
 		c++;
 	}
 }
-

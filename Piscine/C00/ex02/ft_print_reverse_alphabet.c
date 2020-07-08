@@ -6,13 +6,13 @@
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 15:16:14 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/06 15:17:56 by hecho            ###   ########.fr       */
+/*   Updated: 2020/07/08 10:24:25 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_print_reverse_alphabet(void)
+void	ft_print_reverse_alphabet(void)
 {
 	char c;
 
@@ -23,4 +23,3 @@ void    ft_print_reverse_alphabet(void)
 		c--;
 	}
 }
-
