@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/15 11:27:55 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/15 11:28:45 by hecho            ###   ########.fr       */
+/*   Created: 2020/07/15 11:20:50 by hecho             #+#    #+#             */
+/*   Updated: 2020/07/15 11:22:02 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
-#include <string.h>
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int i;
-	int j;
+	unsigned int i;
+	unsigned int j;
 
 	i = 0;
 	while (dest[i] != '\0')
 		i++;
 	j = 0;
-	while (src[j] != '\0')
+	while (src[j] != '\0' && j < nb)
 	{
 		dest[i + j] = src[j];
 		j++;
@@ -37,5 +36,5 @@ int main()
 	char dest[50] = "aaabbb";
 	char src[] = "BlockDMask";
 
-	printf("%s\n", ft_strcat(dest, src));
+	printf("%s\n", ft_strncat(dest, src, 5));
 }

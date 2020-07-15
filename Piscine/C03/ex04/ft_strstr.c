@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/15 11:27:55 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/15 11:28:45 by hecho            ###   ########.fr       */
+/*   Created: 2020/07/15 11:22:45 by hecho             #+#    #+#             */
+/*   Updated: 2020/07/15 11:23:59 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,37 @@
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strstr(char *str, char *to_find)
 {
 	int i;
 	int j;
 
+	if (*to_find == '\0')
+		return (&str[0]);
 	i = 0;
-	while (dest[i] != '\0')
-		i++;
-	j = 0;
-	while (src[j] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i + j] = src[j];
-		j++;
+		if (str[i] == to_find[0])
+		{
+			j = 0;
+			while (1)
+			{
+				if (to_find[j] == '\0')
+					return (&str[i]);
+				if (str[i + j] != to_find[j])
+					break ;
+				j++;
+			}
+		}
+		i++;
 	}
-	dest[i + j] = '\0';
-	return (dest);
+	return (0);
 }
 
 int main()
 {
-	char dest[50] = "aaabbb";
-	char src[] = "BlockDMask";
+	char str[20] = "abcd";
+	char to_find[20] = "c";
 
-	printf("%s\n", ft_strcat(dest, src));
+	printf("%s\n", ft_strstr(str, to_find));
 }
