@@ -6,7 +6,7 @@
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/20 18:29:56 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/20 18:50:32 by hecho            ###   ########.fr       */
+/*   Updated: 2020/07/20 18:59:53 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,22 @@ long long	word_count(char *str, char *charset)
 	return (count);
 }
 
-void		ft_strcpy(char *dest, char *from, char *until)
+void		ft_strcpy(char *dest, char *start, char *end)
 {
-	while (from < until)
-		*(dest++) = *(from++);
+	while (start < end)
+	{
+		*dest = *start;
+		dest++;
+		start++;
+	}
 	*dest = 0;
 }
 
 char		**ft_split(char *str, char *charset)
 {
 	long long	i;
+	char		*start;
 	char		**answer;
-	char		*from;
 
 	answer = (char **)malloc(sizeof(char *) * word_count(str, charset) + 1);
 	i = 0;
@@ -60,11 +64,11 @@ char		**ft_split(char *str, char *charset)
 	{
 		if (!is_contain(*str, charset))
 		{
-			from = str;
+			start = str;
 			while (*str && !is_contain(*str, charset))
 				str++;
-			answer[i] = (char *)malloc(str - from + 1);
-			ft_strcpy(answer[i++], from, str);
+			answer[i] = (char *)malloc(str - start + 1);
+			ft_strcpy(answer[i++], start, str);
 		}
 		str++;
 	}
