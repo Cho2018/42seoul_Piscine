@@ -6,7 +6,7 @@
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 13:21:03 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/20 11:08:52 by hecho            ###   ########.fr       */
+/*   Updated: 2020/07/20 12:46:05 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,18 +51,14 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	len = ft_strlen(sep) * (size - 1);
 	i = 0;
 	while (i < size)
-	{
-		len += ft_strlen(strs[i]);
-		i++;
-	}
+		len += ft_strlen(strs[i++]);
 	answer = (char *)malloc(sizeof(char) * (len + 1));
 	temp = ft_strcat(answer, strs[0]);
 	i = 1;
 	while (i < size)
 	{
 		temp = ft_strcat(temp, sep);
-		temp = ft_strcat(temp, strs[i]);
-		i++;
+		temp = ft_strcat(temp, strs[i++]);
 	}
 	temp[i] = '\0';
 	return (answer);
