@@ -6,11 +6,12 @@
 /*   By: hecho <hecho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/20 18:29:56 by hecho             #+#    #+#             */
-/*   Updated: 2020/07/20 18:59:53 by hecho            ###   ########.fr       */
+/*   Updated: 2020/07/22 10:03:53 by hecho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 int			is_contain(char c, char *charset)
 {
@@ -74,4 +75,18 @@ char		**ft_split(char *str, char *charset)
 	}
 	answer[i] = 0;
 	return (answer);
+}
+
+void print_ho(char *src, char *charset)
+{
+	char **p = ft_split(src, charset);
+	int i = -1;
+	while (p[++i])
+		printf("[%s]", p[i]);
+	printf("\n");
+}
+
+int main()
+{
+	print_ho("a; b; c; d; e; ", "; ");
 }
