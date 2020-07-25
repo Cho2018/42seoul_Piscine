@@ -31,7 +31,6 @@ void	 rec(char *arr, int volume, int n)
 			write(1, arr, n + 2);
 		return ;
 	}
-
 	i = 0;
 	while (i <= 9)
 	{
@@ -50,6 +49,5 @@ void	ft_print_combn(int n)
 
 	arr[n] = ',';
 	arr[n + 1] = ' ';
-
 	rec(arr, 0, n);
 }
