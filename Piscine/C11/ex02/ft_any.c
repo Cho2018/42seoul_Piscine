@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 int		ft_any(char **tab, int (*f)(char*))
 {
