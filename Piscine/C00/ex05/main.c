@@ -29,7 +29,7 @@ void	ft_print_comb(void)
 	while (arr[0] <= '6')
 	{
 		arr[1] = arr[0] + 1;
-        while (arr[1] <= '8') 
+                while (arr[1] <= '8') 
 		{
 			arr[2] = arr[1] + 1;
 			while (arr[2] <= '9')
