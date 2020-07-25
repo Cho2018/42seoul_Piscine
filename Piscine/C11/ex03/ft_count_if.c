@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 int		ft_count_if(char **tab, int length, int (*f)(char*))
 {
