@@ -41,8 +41,8 @@ int main()
 	int max = 10;
 	int *answer;
 	int range = ft_ultimate_range(&answer, min, max);
+	
 	printf("%d\n", range);
-
 	for (int i = 0; i < max - min; i++)
 		printf("%d\n", answer[i]);
 }
